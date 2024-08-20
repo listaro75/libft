@@ -6,7 +6,7 @@ ssh-keygen -t rsa -b 4096 -C "lucien.dacunha@gmail.com"
 
 # liste
 *******************************************************
-Makefile    -
+Makefile    O
 memset      X
 bzero       X
 memcpy      X
@@ -14,18 +14,18 @@ memccpy     X
 memmove     X
 memchr      X
 memcmp      X
-strlen      -
+strlen      O
 strdup      X
-strcpy      -
+strcpy      O
 strncpy     X
-strcat      -
+strcat      O
 strncat     X
 strlcat     X
 strchr      X
 strrchr     X
 strstr      X
 strnstr     X
-strcmp      -
+strcmp      O
 strncmp     X
 atoi        X
 isalpha     X
@@ -34,5 +34,5 @@ isalnum     X
 isascii     X
 isprint     X
 toupper     X
-tolower     X
+tolower     X 
 *********************************************************

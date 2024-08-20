@@ -6,7 +6,7 @@
 /*   By: lucien <lucien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 23:37:19 by lucien            #+#    #+#             */
-/*   Updated: 2024/08/20 20:17:16 by lucien           ###   ########.fr       */
+/*   Updated: 2024/08/20 21:29:49 by lucien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int	main(int argc, char **argv)
 	if (ft_strcmp(tab1, tab11) == 0)
 			printf("[OK] \n");
 	else
-				printf(" [KO] \n");
+				printf("[KO] \n");
 	//**************************** ft_strcmp *****************************
 	printf("| ft_strcmp |");
 	a = ft_strcmp(argv[1], argv[2]);
@@ -59,14 +59,23 @@ int	main(int argc, char **argv)
 	if (ft_strcmp(tab111, tab1111) == 0)
 			printf("[OK] \n");
 	else
-				printf(" [KO] \n");
+				printf("[KO] \n");
 	//**************************** ft_atoi ******************************
 	printf("| ft_atoi   |");
-	printf(" my = %d 	true = %d	",ft_atoi(argv[3]), atoi(argv[3]));
+	printf(" my = %d 		true = %d	",ft_atoi(argv[3]), atoi(argv[3]));
 	if (ft_atoi(argv[3]) == atoi(argv[3]))
 			printf("[OK] \n");
 	else
-				printf(" [KO] \n");
+				printf("[KO] \n");
+	//**************************** ft_isupper ******************************
+	printf("| ft_isupper|");
+	a = ft_isupper('C');
+	b = isupper('C');
+	printf(" my = %d 		true = %d	",a, b);
+	if ((a == 1 && b >= 1 )|| (a == 0 && b == 0))
+			printf("[OK] \n");
+	else
+				printf("[KO] \n");
 	//*******************************************************************
 	printf("*******************************************************\n");
 	return (0);
