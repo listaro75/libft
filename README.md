@@ -16,7 +16,7 @@ memchr      X
 memcmp      X
 strlen      O
 strdup      X
-strcpy      X
+strcpy      0
 strncpy     X
 strcat      X
 strncat     X
@@ -25,7 +25,7 @@ strchr      X
 strrchr     X
 strstr      X
 strnstr     X
-strcmp      X
+strcmp      0
 strncmp     X
 atoi        X
 isalpha     X

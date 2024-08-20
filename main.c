@@ -6,7 +6,7 @@
 /*   By: lucien <lucien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 23:37:19 by lucien            #+#    #+#             */
-/*   Updated: 2024/08/20 19:01:40 by lucien           ###   ########.fr       */
+/*   Updated: 2024/08/20 19:23:05 by lucien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,18 @@ int	main(int argc, char **argv)
 		printf("[OK] \n");
 	else 
 		printf("[KO] \n");
+	//**************************** ft_strcat *****************************
+	printf("| ft_strcat |");
+	char tab111[] = "luc";
+	char tab222[] = "ien";
+	char tab1111[] = "luc";
+	char tab2222[] = "ien";
+	printf(" my = %s	true = %s	",ft_strcat(tab111,tab222),strcat(tab1111,tab2222));
+	if (ft_strcmp(tab111, tab1111) == 0)
+			printf("[OK] \n");
+	else
+				printf(" [KO] \n");
 	//*******************************************************************
-	printf("*************************************\n");
+	printf("*******************************************************\n");
 	return (0);
 }
