@@ -1,29 +1,22 @@
-# Variables
-CC = gcc                  # Le compilateur
-CFLAGS = -Wall -Wextra -Werror -g  # Options de compilation (warnings et debug)
-NAME = programme          # Nom de l'exécutable
-SRCS = programme.c util.c  # Fichiers source
-OBJS = $(SRCS:.c=.o)      # Les fichiers objets correspondants
+#make file
+CC = cc								# Compiler et options de compilation
+CFLAGS = -Wall -Wextra -Werror -g
+TARGET = test						# Nom de l'exécutable
+SRCS = main.c ft_strlen.c			# Fichiers sources
 
-# Règle principale : compile l'exécutable
-all: $(NAME)
+# Fichiers objets
+OBJS = $(SRCS:.c=.o)
 
-# Règle pour créer l'exécutable
-$(NAME): $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+# Règle par défaut pour construire le programme
+all: $(TARGET)
 
-# Règle pour compiler les fichiers objets
-%.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+# Compilation de l'exécutable
+$(TARGET): $(OBJS)
+	$(CC) $(CFLAGS) -o $(TARGET) $(OBJS)
 
-# Nettoie les fichiers objets (.o)
+# Règle pour nettoyer les fichiers objets et l'exécutable
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJS) $(TARGET)
 
-# Nettoie les fichiers objets et l'exécutable
-fclean: clean
-	rm -f $(NAME)
-
-# Recompile tout à partir de zéro
-re: fclean all
-
+# Règle pour tout reconstruire
+re: clean all
