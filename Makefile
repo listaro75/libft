@@ -2,7 +2,7 @@
 CC = cc								# Compiler et options de compilation
 CFLAGS = -Wall -Wextra -Werror -g
 TARGET = test						# Nom de l'exécutable
-SRCS = main.c ft_strlen.c			# Fichiers sources
+SRCS = main.c ft_strlen.c ft_strcpy.c ft_strcmp.c	# Fichiers sources
 
 # Fichiers objets
 OBJS = $(SRCS:.c=.o)

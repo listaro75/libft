@@ -6,5 +6,8 @@
 #include <stdlib.h>
 
 
-int ft_strlen(const char *str);
+int ft_strlen(const char *str);                  //ne peut etre modifier
+char *ft_strcpy(char *dest, const char *src);
+int	ft_strcmp(const char *s1, const char *s2);
+
 #endif
