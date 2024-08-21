@@ -8,38 +8,22 @@ ssh-keygen -t rsa -b 4096 -C "lucien.dacunha@gmail.com"
 ```
 ## liste
 *******************************************************
-| fonction  | etat |
-| ------------- | ------------- |
-| `Makefile`|  O  |
-| `bzero`   |  X  |
-| `memcpy`  |  X  |
-| `memccpy` |  X  | 
-| `memchr`  |  X  | 
-| `memmove` |  X  | 
-| `memcmp`  |  X  |
-| `strlen`  |  O  |
-| `strdup`  |  X  |
-| `strcpy`  |  O  |
-| `strncpy` |  X  |
-| `strcat`  |  O  |
-| `strncat` |  X  |
-| `strlcat` |  X  |
-
-| `strchr`  |  X  |
-| `strrchr` |  X  |
-| `strstr`  |  X  |
-| `strnstr` |  X  |
-| `strcmp`  |  O  |
-| `strncmp` |  X  |
-| `atoi`    |  X  |
-| `isalpha` |  X  |
-| `isdigit` |  X  |
-| `isalnum` |  X  |
-| `isascii` |  X  |
-| `isprint` |  X  |
-| `toupper` |  X  |
-| `tolower` |  X  | 
-
+| fonction  | etat| fonction  | etat |
+| --------- | --- | --------- | ---- |
+| `Makefile`|  O  | `strchr`  |  X  |
+| `bzero`   |  X  | `strrchr` |  X  |
+| `memcpy`  |  X  | `strstr`  |  X  |
+| `memccpy` |  X  | `strnstr` |  X  |
+| `memchr`  |  X  | `strcmp`  |  O  |
+| `memmove` |  X  | `strncmp` |  X  |
+| `memcmp`  |  X  | `atoi`    |  X  |
+| `strlen`  |  O  | `isalpha` |  X  |
+| `strdup`  |  X  | `isdigit` |  X  |
+| `strcpy`  |  O  | `isalnum` |  X  |
+| `strncpy` |  X  | `isascii` |  X  |
+| `strcat`  |  O  | `isprint` |  X  |
+| `strncat` |  X  | `toupper` |  X  |
+| `strlcat` |  X  | `tolower` |  X  | 
 *********************************************************
 
 plus 
