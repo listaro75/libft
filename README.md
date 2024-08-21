@@ -6,9 +6,8 @@ projet libft 42
 
 ssh-keygen -t rsa -b 4096 -C "lucien.dacunha@gmail.com"
 ```
-# liste
+## liste
 *******************************************************
-liste : 
 Makefile    O 
 bzero       X
 memcpy      X
