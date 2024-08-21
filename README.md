@@ -8,10 +8,10 @@ ssh-keygen -t rsa -b 4096 -C "lucien.dacunha@gmail.com"
 ```
 ## liste
 *******************************************************
-| fonction  | etat | fonction  | etat |
-| :-------: | :--: | :-------: | :--: |
-| `Makefile`|  O   | `strchr`  |  X   |
-| `bzero`   |  X   | `strrchr` |  X   |
+| fonction  | etat  | fonction  | etat |
+| :-------: | :--:  | :-------: | :--: |
+| `Makefile`|  [x]  | `strchr`  |  X   |
+| `bzero`   |  [ ]  | `strrchr` |  X   |
 | `memcpy`  |  X   | `strstr`  |  X   |
 | `memccpy` |  X   | `strnstr` |  X   |
 | `memchr`  |  X   | `strcmp`  |  O   |
