@@ -24,6 +24,7 @@ ssh-keygen -t rsa -b 4096 -C "lucien.dacunha@gmail.com"
 | `strcat`  |  O  |
 | `strncat` |  X  |
 | `strlcat` |  X  |
+
 | `strchr`  |  X  |
 | `strrchr` |  X  |
 | `strstr`  |  X  |
