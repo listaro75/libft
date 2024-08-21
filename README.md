@@ -2,8 +2,10 @@
 projet libft 42
 
 # generer une clee ssh
-ssh-keygen -t rsa -b 4096 -C "lucien.dacunha@gmail.com"
+```sh
 
+ssh-keygen -t rsa -b 4096 -C "lucien.dacunha@gmail.com"
+```
 # liste
 *******************************************************
 Makefile    O
@@ -35,6 +37,7 @@ isascii     X
 isprint     X
 toupper     X
 tolower     X 
+
 *********************************************************
 
 plus 
