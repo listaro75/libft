@@ -10,9 +10,9 @@ ssh-keygen -t rsa -b 4096 -C "lucien.dacunha@gmail.com"
 *******************************************************
 
 `Makefile`    O    
-`bzero`       X
-`memcpy`      X
-`memccpy`     X
+`bzero`       X 
+`memcpy`      X 
+`memccpy`     X 
 `memmove`     X
 `memchr`      X
 `memcmp`      X
