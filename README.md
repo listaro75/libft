@@ -8,8 +8,8 @@ ssh-keygen -t rsa -b 4096 -C "lucien.dacunha@gmail.com"
 ```
 # liste
 *******************************************************
-liste :
-Makefile    O
+liste : 
+Makefile    O 
 bzero       X
 memcpy      X
 memccpy     X
