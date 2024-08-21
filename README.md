@@ -36,3 +36,6 @@ isprint     X
 toupper     X
 tolower     X 
 *********************************************************
+
+plus 
+isupper     0
