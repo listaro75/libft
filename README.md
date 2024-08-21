@@ -12,7 +12,7 @@ ssh-keygen -t rsa -b 4096 -C "lucien.dacunha@gmail.com"
 | :-------: | :--:    | :-------: | :-----: | :-----------: | :--:  | :-----------:  | :--: |
 | `Makefile`|  [yes]  | `strchr`  |  [no]   | `ft_memalloc` | [no]  | `ft_strsplit`  | [no] |
 | `bzero`   |  [no]   | `strrchr` |  [no]   | `ft_memdel`   | [no]  | `ft_itoa`      | [no] |
-| `memcpy`  |  [no]   | `strstr`  |  [no]   | `ft_strnew`   | [no]  | `ft_putchar`   | [no] |
+| `memcpy`  |  [no]   | `strstr`  |  [no]   | `ft_strnew`   | [no]  | `ft_putchar`   | [yes]|
 | `memccpy` |  [no]   | `strnstr` |  [no]   | `ft_strdel`   | [no]  | `ft_putstr`    | [no] |
 | `memchr`  |  [no]   | `strcmp`  |  [yes]  | `ft_strclr`   | [no]  | `ft_putendl`   | [no] |
 | `memmove` |  [no]   | `strncmp` |  [no]   | `ft_striter`  | [no]  | `ft_putnbr`    | [no] |
