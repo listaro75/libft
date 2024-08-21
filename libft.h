@@ -14,5 +14,6 @@ int	ft_atoi(const char *nptr);
 int	ft_isalpha(char c);
 void ft_putchar(char c);
 void ft_putstr(char const *s);
+void ft_putendl(char const *s);
 
 #endif
