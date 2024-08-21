@@ -1,13 +1,13 @@
 # libft
 projet libft 42
 
-# generer une clee ssh
+## generer une clee ssh
 ```sh
 
 ssh-keygen -t rsa -b 4096 -C "lucien.dacunha@gmail.com"
 ```
-## liste
-*******************************************************
+## liste Fonction :
+
 | fonction  | etat    | fonction  | etat    | fonction sup  | etat  | fonction sup   | etat |
 | :-------: | :--:    | :-------: | :-----: | :-----------: | :--:  | :-----------:  | :--: |
 | `Makefile`|  [ok]   | `strchr`  |  [no]   | `ft_memalloc` | [no]  | `ft_strsplit`  | [no] |
@@ -25,6 +25,3 @@ ssh-keygen -t rsa -b 4096 -C "lucien.dacunha@gmail.com"
 | `strncat` |  [no]   | `toupper` |  [no]   | `ft_strjoin`  | [no]  | 
 | `strlcat` |  [no]   | `tolower` |  [no]   | `ft_strtrim`  | [no]  | 
 *********************************************************
-
-plus 
-isupper     0
