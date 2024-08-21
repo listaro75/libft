@@ -10,20 +10,20 @@ ssh-keygen -t rsa -b 4096 -C "lucien.dacunha@gmail.com"
 *******************************************************
 | fonction  | etat  | fonction  | etat |
 | :-------: | :--:  | :-------: | :--: |
-| `Makefile`| -[x]  | `strchr`  |  X   |
-| `bzero`   | -[ ]  | `strrchr` |  X   |
-| `memcpy`  |  X   | `strstr`  |  X   |
-| `memccpy` |  X   | `strnstr` |  X   |
-| `memchr`  |  X   | `strcmp`  |  O   |
-| `memmove` |  X   | `strncmp` |  X   |
-| `memcmp`  |  X   | `atoi`    |  X   |
-| `strlen`  |  O   | `isalpha` |  X   |
-| `strdup`  |  X   | `isdigit` |  X   |
-| `strcpy`  |  O   | `isalnum` |  X   |
-| `strncpy` |  X   | `isascii` |  X   |
-| `strcat`  |  O   | `isprint` |  X   |
-| `strncat` |  X   | `toupper` |  X   |
-| `strlcat` |  X   | `tolower` |  X   | 
+| `Makefile`|  [ok]   | `strchr`  |  [no]   |
+| `bzero`   |  [no]   | `strrchr` |  [no]   |
+| `memcpy`  |  [no]   | `strstr`  |  [no]   |
+| `memccpy` |  [no]   | `strnstr` |  [no]   |
+| `memchr`  |  [no]   | `strcmp`  |  [ok]   |
+| `memmove` |  [no]   | `strncmp` |  [no]   |
+| `memcmp`  |  [no]   | `atoi`    |  [no]   |
+| `strlen`  |  [ok]   | `isalpha` |  [no]   |
+| `strdup`  |  [no]   | `isdigit` |  [no]   |
+| `strcpy`  |  [ok]   | `isalnum` |  [no]   |
+| `strncpy` |  [no]   | `isascii` |  [no]   |
+| `strcat`  |  [ok]   | `isprint` |  [no]   |
+| `strncat` |  [no]   | `toupper` |  [no]   |
+| `strlcat` |  [no]   | `tolower` |  [no]   | 
 *********************************************************
 
 plus 
