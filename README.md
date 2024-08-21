@@ -8,8 +8,11 @@ ssh-keygen -t rsa -b 4096 -C "lucien.dacunha@gmail.com"
 ```
 ## liste
 *******************************************************
-| fonction  | etat  | fonction  | etat |
-| :-------: | :--:  | :-------: | :--: |
+|fonction|
+|--|
+|base|
+|| fonction  | etat    | fonction  | etat    |
+| :-------: | :--:    | :-------: | :--:    |
 | `Makefile`|  [ok]   | `strchr`  |  [no]   |
 | `bzero`   |  [no]   | `strrchr` |  [no]   |
 | `memcpy`  |  [no]   | `strstr`  |  [no]   |
@@ -23,7 +26,9 @@ ssh-keygen -t rsa -b 4096 -C "lucien.dacunha@gmail.com"
 | `strncpy` |  [no]   | `isascii` |  [no]   |
 | `strcat`  |  [ok]   | `isprint` |  [no]   |
 | `strncat` |  [no]   | `toupper` |  [no]   |
-| `strlcat` |  [no]   | `tolower` |  [no]   | 
+| `strlcat` |  [no]   | `tolower` |  [no]   ||
+|sup|
+
 *********************************************************
 
 plus 
