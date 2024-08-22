@@ -23,9 +23,10 @@ int ft_toupper( int character );
 int	ft_tolower( int character );
 
 
-void ft_putchar(char c);
-void ft_putstr(char const *s);
-void ft_putendl(char const *s);
+void	ft_putchar(char c);
+void	ft_putstr(char const *s);
+void	ft_putendl(char const *s);
+void	ft_putnbr(int nbr);
 
 int	ft_atoi(const char *nptr);
 
