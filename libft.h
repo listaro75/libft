@@ -19,6 +19,7 @@ int	ft_isalpha(char c);
 int ft_isdigit(int character);
 int ft_isalnum(int character);
 int	ft_isascii(int c);
+int	ft_isprint(int character);
 
 int ft_toupper(int character);
 int	ft_tolower(int character);
