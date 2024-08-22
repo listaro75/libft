@@ -6,7 +6,7 @@
 /*   By: lucien <lucien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 23:37:19 by lucien            #+#    #+#             */
-/*   Updated: 2024/08/22 22:46:12 by lucien           ###   ########.fr       */
+/*   Updated: 2024/08/22 22:54:25 by lucien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -181,11 +181,11 @@ int	main(int argc, char **argv)
 	b = isprint('a');
 	printf(" my = %d 		true = %d	",a, b);
 	if ((a == 1 && b >= 1 )|| (a == 0 && b == 0))
-			printf("[OK] n°19\n");
-		else
-			printf("[KO] n°19\n");
-	//**************************** ft_isprint ******************************
-	printf("| ft_isprint|");
+		printf("[OK] n°19\n");
+	else
+		printf("[KO] n°19\n");
+	//**************************** ft_strncat ******************************
+	printf("| ft_strncat|");
 	char *aaa;
 	char *bbb;
 	aa = ft_strdup(argv[1]);
@@ -193,10 +193,16 @@ int	main(int argc, char **argv)
 	aaa = ft_strdup(argv[2]);
 	bbb = ft_strdup(argv[2]);
 	printf(" my = %s 		true = %s	",ft_strncat(aa,bbb,ft_atoi(argv[3])), strncat(bb,aaa,ft_atoi(argv[3])));
+	if(ft_strcmp(aa,bb) == 0)
+		printf("[OK] n°20\n");
+	else
+		printf("[KO] n°20\n");
+
 	free(aa);
 	free(aaa);
 	free(bb);
 	free(bbb);
+	
 	//*******************************************************************
 	printf("*******************************************************\n");
 	return (0);
