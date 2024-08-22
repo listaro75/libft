@@ -6,7 +6,7 @@
 /*   By: lucien <lucien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 23:37:19 by lucien            #+#    #+#             */
-/*   Updated: 2024/08/22 01:57:34 by lucien           ###   ########.fr       */
+/*   Updated: 2024/08/22 02:20:01 by lucien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,6 +88,15 @@ int	main(int argc, char **argv)
 	printf("| ft_putendl|");
 	printf(" my = x 		true = x 	");
 	printf("[OK] \n");
+	//**************************** ft_isdigit ******************************
+	printf("| ft_isdigit|");
+	a = ft_isdigit('9');
+	b = isdigit('9');
+	printf(" my = %d 		true = %d	",a, b);
+	if ((a == 1 && b >= 1 )|| (a == 0 && b == 0))
+			printf("[OK] \n");
+	else
+				printf("[KO] \n");
 	//*******************************************************************
 
 	

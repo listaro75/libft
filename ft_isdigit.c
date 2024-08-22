@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isupper.c                                       :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucien <lucien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/20 20:41:03 by lucien            #+#    #+#             */
-/*   Updated: 2024/08/20 21:19:29 by lucien           ###   ########.fr       */
+/*   Created: 2024/08/22 02:13:11 by lucien            #+#    #+#             */
+/*   Updated: 2024/08/22 02:15:15 by lucien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isupper(char c)
+int ft_isdigit( int character )
 {
-	if (c >= 'A' && c <= 'Z')
-		return(1);
+	if (character >= '0' && character <= '9')
+		return (1);
 	return (0);
 }

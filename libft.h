@@ -15,5 +15,6 @@ int	ft_isalpha(char c);
 void ft_putchar(char c);
 void ft_putstr(char const *s);
 void ft_putendl(char const *s);
+int ft_isdigit( int character );
 
 #endif
