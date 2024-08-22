@@ -6,7 +6,7 @@
 /*   By: lucien <lucien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 23:37:19 by lucien            #+#    #+#             */
-/*   Updated: 2024/08/22 03:40:55 by lucien           ###   ########.fr       */
+/*   Updated: 2024/08/22 14:11:26 by lucien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -128,11 +128,38 @@ int	main(int argc, char **argv)
 	char *aa;
 	char *bb;
 	aa = ft_strdup(argv[1]);
-	bb = ft_strdup(argv[1]);
+	bb = strdup(argv[1]);
 	printf(" my = %s 		true = %s	",aa,bb);
 	free(aa);
 	free(bb);
 	printf("[OK] n°14\n");
+	//**************************** ft_strchr ******************************
+	printf("| ft_strdup |");
+
+	char *str = "112o";
+    char ch;
+    char *result1;
+    char *result2;
+
+	str = ft_strdup(argv[1]);
+	ch = 'o';
+	result1 = ft_strchr(str, ch);
+	result2 = strchr(str, ch);
+    if (result1 != NULL && result2 != NULL) {
+		printf(" my = %ld 		true = %ld	",result1 - str, result2 - str);
+		if (result1 - str == result2 - str)
+			printf("[OK] n°15\n");
+		else
+			printf("[KO] n°15\n");
+    }
+	else
+	{
+		printf(" my = NULL 	true = NULL	");
+		printf("[OK] n°15\n");
+	}
+	
+	
+	free(str);
 	//*******************************************************************
 
 	
