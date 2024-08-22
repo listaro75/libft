@@ -16,11 +16,12 @@ char    *ft_strchr( const char * string, int searchedChar );
 
 
 int	ft_isalpha(char c);
-int ft_isdigit( int character );
-int ft_isalnum( int character );
+int ft_isdigit(int character);
+int ft_isalnum(int character);
+int	ft_isascii(int c);
 
-int ft_toupper( int character );
-int	ft_tolower( int character );
+int ft_toupper(int character);
+int	ft_tolower(int character);
 
 
 void	ft_putchar(char c);
