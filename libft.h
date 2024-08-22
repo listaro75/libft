@@ -6,15 +6,19 @@
 #include <stdlib.h>
 #include <ctype.h>
 
+int	ft_strcmp(const char *s1, const char *s2);
 int	ft_strlen(const char *str);                  //ne peut etre modifier
 char	*ft_strcpy(char *dest, const char *src);
-int	ft_strcmp(const char *s1, const char *s2);
 char	*ft_strcat(char *dest, const char *src);
-int	ft_atoi(const char *nptr);
+
 int	ft_isalpha(char c);
+int ft_isdigit( int character );
+
 void ft_putchar(char c);
 void ft_putstr(char const *s);
 void ft_putendl(char const *s);
-int ft_isdigit( int character );
+
+int	ft_atoi(const char *nptr);
+
 
 #endif
