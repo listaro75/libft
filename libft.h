@@ -15,6 +15,10 @@ int	ft_isalpha(char c);
 int ft_isdigit( int character );
 int ft_isalnum( int character );
 
+int ft_toupper( int character );
+int	ft_tolower( int character );
+
+
 void ft_putchar(char c);
 void ft_putstr(char const *s);
 void ft_putendl(char const *s);

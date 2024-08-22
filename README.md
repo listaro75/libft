@@ -22,7 +22,7 @@ ssh-keygen -t rsa -b 4096 -C "lucien.dacunha@gmail.com"
 | `strcpy`  |  [yes]  | `isalnum` |  [yes]  | `ft_strequ`   | [no]  | `ft_putnbr_fd` | [no] |
 | `strncpy` |  [no]   | `isascii` |  [no]   | `ft_strnequ`  | [no]  | `53/11`        | [no] |
 | `strcat`  |  [yes]  | `isprint` |  [no]   | `ft_strsub`   | [no]  | 
-| `strncat` |  [no]   | `toupper` |  [no]   | `ft_strjoin`  | [no]  | 
+| `strncat` |  [no]   | `toupper` |  [yes]  | `ft_strjoin`  | [no]  | 
 | `strlcat` |  [no]   | `tolower` |  [no]   | `ft_strtrim`  | [no]  | 
 *********************************************************
 
