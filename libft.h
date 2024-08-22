@@ -12,6 +12,8 @@ int	ft_strlen(const char *str);                  //ne peut etre modifier
 char	*ft_strcpy(char *dest, const char *src);
 char	*ft_strcat(char *dest, const char *src);
 char	*ft_strdup(const char *source);
+char    *ft_strchr( const char * string, int searchedChar );
+
 
 int	ft_isalpha(char c);
 int ft_isdigit( int character );
