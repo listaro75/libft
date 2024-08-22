@@ -13,6 +13,7 @@ char	*ft_strcat(char *dest, const char *src);
 
 int	ft_isalpha(char c);
 int ft_isdigit( int character );
+int ft_isalnum( int character );
 
 void ft_putchar(char c);
 void ft_putstr(char const *s);
