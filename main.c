@@ -6,7 +6,7 @@
 /*   By: lucien <lucien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 23:37:19 by lucien            #+#    #+#             */
-/*   Updated: 2024/08/22 02:57:35 by lucien           ###   ########.fr       */
+/*   Updated: 2024/08/22 03:06:22 by lucien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,6 +115,15 @@ int	main(int argc, char **argv)
 			printf("[OK] n°12\n");
 	else
 			printf("[KO] n°12\n");
+	//**************************** ft_tolower ******************************
+	printf("| ft_tolower|");
+	a = ft_tolower('A');
+	b = tolower('A');
+	printf(" my = %c 		true = %c	",a, b);
+	if (a == b)
+			printf("[OK] n°13\n");
+	else
+			printf("[KO] n°13\n");
 	//*******************************************************************
 
 	
