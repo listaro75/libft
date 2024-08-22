@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucien <lucien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/20 19:04:25 by lucien            #+#    #+#             */
-/*   Updated: 2024/08/22 21:57:17 by lucien           ###   ########.fr       */
+/*   Created: 2024/08/22 21:50:07 by lucien            #+#    #+#             */
+/*   Updated: 2024/08/22 22:48:13 by lucien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcat(char *dest, const char *src)
+char	*ft_strncat(char *destination, const char *source, size_t size)
 {
-	int	i;
-	int	j;
+	unsigned int	i;
+	unsigned int	j;
 
-	i = ft_strlen(dest);
+	i = 0;
 	j = 0;
-	while (src[j])
-	{
-		dest[i] = src[j];
+	while (destination[i])
 		i++;
+	while (source[j] != 0 && j < size)
+	{
+		destination[i + j] = source[j];
 		j++;
 	}
-	dest[i] = 0;
-	return(dest);
+		destination[i + j] = 0;
+	return (destination);
 }

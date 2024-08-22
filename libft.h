@@ -13,6 +13,8 @@ char	*ft_strcpy(char *dest, const char *src);
 char	*ft_strcat(char *dest, const char *src);
 char	*ft_strdup(const char *source);
 char    *ft_strchr( const char * string, int searchedChar );
+char	*ft_strncat(char *destination, const char *source, size_t size);
+
 
 
 int	ft_isalpha(char c);
