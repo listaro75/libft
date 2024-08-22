@@ -5,6 +5,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <ctype.h>
+#include <stdio.h>
 
 int	ft_strcmp(const char *s1, const char *s2);
 int	ft_strlen(const char *str);                  //ne peut etre modifier

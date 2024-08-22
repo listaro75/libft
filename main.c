@@ -6,13 +6,12 @@
 /*   By: lucien <lucien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 23:37:19 by lucien            #+#    #+#             */
-/*   Updated: 2024/08/22 03:06:22 by lucien           ###   ########.fr       */
+/*   Updated: 2024/08/22 03:08:00 by lucien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include "libft.h"
-#include <stdio.h>
 
 int	main(int argc, char **argv)
 {
