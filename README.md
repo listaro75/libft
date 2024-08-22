@@ -9,7 +9,7 @@ ssh-keygen -t rsa -b 4096 -C "lucien.dacunha@gmail.com"
 ## liste Fonction :
 
 | fonction  | etat    | fonction  | etat    | fonction sup  | etat  | fonction sup   | etat |
-| :-------: | :--:    | :-------: | :-----: | :-----------: | :--:  | :-----------:  | :--: |
+| :-------- | :--:    | :-------- | :-----: | :------------ | :--:  | :------------  | :--: |
 | `Makefile`|  [yes]  | `strchr`  |  [no]   | `ft_memalloc` | [no]  | `ft_strsplit`  | [no] |
 | `bzero`   |  [no]   | `strrchr` |  [no]   | `ft_memdel`   | [no]  | `ft_itoa`      | [no] |
 | `memcpy`  |  [no]   | `strstr`  |  [no]   | `ft_strnew`   | [no]  | `ft_putchar`   | [yes]|
