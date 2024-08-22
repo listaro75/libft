@@ -11,6 +11,7 @@ int	ft_strcmp(const char *s1, const char *s2);
 int	ft_strlen(const char *str);                  //ne peut etre modifier
 char	*ft_strcpy(char *dest, const char *src);
 char	*ft_strcat(char *dest, const char *src);
+char	*ft_strdup(const char *source);
 
 int	ft_isalpha(char c);
 int ft_isdigit( int character );

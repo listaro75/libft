@@ -6,7 +6,7 @@
 /*   By: lucien <lucien@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 23:37:19 by lucien            #+#    #+#             */
-/*   Updated: 2024/08/22 03:08:00 by lucien           ###   ########.fr       */
+/*   Updated: 2024/08/22 03:40:55 by lucien           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -123,6 +123,16 @@ int	main(int argc, char **argv)
 			printf("[OK] n°13\n");
 	else
 			printf("[KO] n°13\n");
+	//**************************** ft_strdup ******************************
+	printf("| ft_strdup |");
+	char *aa;
+	char *bb;
+	aa = ft_strdup(argv[1]);
+	bb = ft_strdup(argv[1]);
+	printf(" my = %s 		true = %s	",aa,bb);
+	free(aa);
+	free(bb);
+	printf("[OK] n°14\n");
 	//*******************************************************************
 
 	
