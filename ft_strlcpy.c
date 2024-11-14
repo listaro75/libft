@@ -1,20 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lucien <lucien@student.42.fr>              +#+  +:+       +#+        */
+/*   By: luda-cun <luda-cun@student.42.fr>          #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/22 03:00:57 by lucien            #+#    #+#             */
-/*   Updated: 2024/08/22 03:03:20 by lucien           ###   ########.fr       */
+/*   Created: 2024-11-14 09:29:00 by luda-cun          #+#    #+#             */
+/*   Updated: 2024-11-14 09:29:00 by luda-cun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_tolower( int c )
+size_t  ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	if (c >= 'A' && c <= 'Z')
-		return (c + 32);
-	return (c);
+    size_t i;
+
+    while (src[i])
+    {
+        dst[i] = src[i];
+        i++;
+    }
+
+    return (i);
 }
