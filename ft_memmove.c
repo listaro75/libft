@@ -12,13 +12,7 @@
 
 #include "libft.h"
 
-int	main(void)
-{
-	char s1[] = " ,world!";
-	char s1[] = "hello "; 
-	printf("%s",memmove(s1 ,s2, 10));
-	return 0;
-}
+
 
 
 // void *ft_memmove(void *dest, void *src, size_t size)
@@ -26,13 +20,40 @@ int	main(void)
 // 	char 	*ptrdest;
 // 	char 	*ptrsrc;
 // 	size_t	i;
+// 	size_t	n;
 
-// 	ptrdest = dest;
-// 	ptrsrc = src;
+
+// 	ptrdest = *(char*)dest;
+// 	ptrsrc = *(char*)src;
+
 // 	i = 0;
+// 	n = 0;
+// 	if (size == 0)
+// 		return (ptrdest);
+// 	if(dest < src)
+// 	{	
+// 		while (size -- > 0)
+// 		{
 
-// 	if ()
+// 			ptrdest[i] = ptrsrc[i]; 
+// 			i++;
+// 			if(ptrsrc[i] == 0)
+// 				return (ptrdest);
+// 		}
+// 	}
+// 	if(src > dest)
 // 	{
 
 // 	}
+// 	return (ptrdest);
+	
 // }
+
+int	main(void)
+{
+	char s1[] = "hello, world!";
+	char s2[] = "hello, world!";  
+	printf("%s \n",memmove(s1,s1 + 3 , 13));
+	// printf("%s",ft_memmove(s2 ,s2 + 3, 10));
+	return (0);
+}
