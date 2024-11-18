@@ -10,4 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include 
+#include "libft.h"
+
+int main(void)
+{
+    char str1[] = "lulu";
+    ft_bzero(str1, 2);
+    printf("%c %c %c %c ",str1[0],str1[1],str1[2],str1[3] );
+}
