@@ -6,23 +6,11 @@
 /*   By: luciendacunha <luciendacunha@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 09:52:06 by luda-cun          #+#    #+#             */
-/*   Updated: 2024/11/18 20:44:22 by luciendacun      ###   ########.fr       */
+/*   Updated: 2024/11/18 20:57:32 by luciendacun      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int ft_strlen(const char *str)
-{
-	int	i;
-	
-	i = 0;
-	while (str[i])
-	{
-		i++;
-	}
-	return (i);
-}
 
 size_t  ft_strlcat(char *dst, const char *src, size_t size)
 {

@@ -6,7 +6,7 @@
 /*   By: luciendacunha <luciendacunha@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 16:42:55 by luda-cun          #+#    #+#             */
-/*   Updated: 2024/11/18 20:13:47 by luciendacun      ###   ########.fr       */
+/*   Updated: 2024/11/19 00:02:35 by luciendacun      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,6 @@ int		ft_strncmp(const char *s1, const char *s2, size_t size);
 char	*ft_strrchr(const char* str, int c);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
+char    *ft_strnstr(const char *haystack, const char *needle, size_t len);
 
 #endif	
