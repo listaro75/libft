@@ -1,22 +1,34 @@
-#make file
-CC = cc								# Compiler et options de compilation
-CFLAGS = -Wall -Wextra -Werror -g
-TARGET = test						# Nom de l'exécutable
-SRCS = main.c ft_strlen.c ft_strcpy.c ft_strcmp.c ft_strcat.c ft_atoi.c  ft_isalpha.c ft_putchar.c	ft_putstr.c ft_putendl.c ft_isdigit.c ft_isalnum.c ft_toupper.c ft_tolower.c ft_strdup.c ft_strchr.c  ft_putnbr.c ft_putchar_fd.c ft_isascii.c ft_isprint.c ft_strncat.c# Fichiers sources
+TARGET = libft.a
+PROGRAM_NAME = prog
 
-# Fichiers objets
-OBJS = $(SRCS:.c=.o)
+CC = cc
+AR = ar -rcs
 
-# Règle par défaut pour construire le programme
+FILES = main.c ft_bzero.c
+
+CFLAGS = -Wall -Wextra -Werror
+OBJS = $(FILES:.c=.o)
+
 all: $(TARGET)
 
-# Compilation de l'exécutable
-$(TARGET): $(OBJS)
-	$(CC) $(CFLAGS) -o $(TARGET) $(OBJS)
+$(TARGET) : $(OBJS)
+	$(AR) $(TARGET) $(OBJS)
+	$(CC) $(CFLAGS) $(OBJS) -o $(PROGRAM_NAME)
 
-# Règle pour nettoyer les fichiers objets et l'exécutable
+$(OBJS) : $(FILES)
+	# $< Récupère chaque fichier sources
+	# $^ Dépose chaque fichier objets
+	$(CC) $(CFLAGS) -c $< $^
+
 clean:
-	rm -f $(OBJS) $(TARGET)
+	rm -rf $(OBJS) 
 
-# Règle pour tout reconstruire
-re: clean all
+fclean : clean
+	rm -rf $(TARGET)
+
+go : all
+	./$(PROGRAM_NAME)
+
+re: fclean all
+
+.PHONY: all clean fclean re go

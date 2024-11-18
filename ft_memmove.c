@@ -12,48 +12,39 @@
 
 #include "libft.h"
 
+void *ft_memmove(void *dest, void *src, size_t size)
+{
+	size_t	i;
 
+	i = 0;
+	if(dest < src)
+	{	
+		while (i < size)
+		{
 
-
-// void *ft_memmove(void *dest, void *src, size_t size)
-// {
-// 	char 	*ptrdest;
-// 	char 	*ptrsrc;
-// 	size_t	i;
-// 	size_t	n;
-
-
-// 	ptrdest = *(char*)dest;
-// 	ptrsrc = *(char*)src;
-
-// 	i = 0;
-// 	n = 0;
-// 	if (size == 0)
-// 		return (ptrdest);
-// 	if(dest < src)
-// 	{	
-// 		while (size -- > 0)
-// 		{
-
-// 			ptrdest[i] = ptrsrc[i]; 
-// 			i++;
-// 			if(ptrsrc[i] == 0)
-// 				return (ptrdest);
-// 		}
-// 	}
-// 	if(src > dest)
-// 	{
-
-// 	}
-// 	return (ptrdest);
+			*(unsigned char*)(dest + i) = *(unsigned char*)(src + i); 
+			i++;
+		}
+			return (dest);
+	}
+	else 
+	{
+		i = size -1;
+		while (i >= 0)
+		{
+			*(unsigned char*)(dest + i) = *(unsigned char*)(src + i);
+			i--;
+		}
+	}
+	return (dest);
 	
-// }
+}
 
 int	main(void)
 {
 	char s1[] = "hello, world!";
 	char s2[] = "hello, world!";  
-	printf("%s \n",memmove(s1,s1 + 3 , 13));
-	// printf("%s",ft_memmove(s2 ,s2 + 3, 10));
+	printf("%s \n",memmove(s1,s1 + 3 , 10));
+	printf("%s",ft_memmove(s2 ,s2 + 3, 10));
 	return (0);
 }

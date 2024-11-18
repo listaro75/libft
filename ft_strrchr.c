@@ -1,48 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lucien <lucien@student.42.fr>              +#+  +:+       +#+        */
+/*   By: luda-cun <luda-cun@student.42.fr>          #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/22 03:52:06 by lucien            #+#    #+#             */
-/*   Updated: 2024/08/22 14:05:19 by lucien           ###   ########.fr       */
+/*   Created: 2024-11-18 12:37:39 by luda-cun          #+#    #+#             */
+/*   Updated: 2024-11-18 12:37:39 by luda-cun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char * ft_strchr( const char * str, int c )
+char    *ft_strrchr(const char* str, int c)
 {
-	size_t	i;
+    int i;
 
-	i = 0;
-	if(!str)
-		return (NULL);
-	while (str[i])
+    i = ft_strlen(str);
+    if(!str)
+        return(NULL);
+	while (i >= 0)
 	{
-		if (str[i] == (char)c)
-			return ((char *)(str + i));
-		i++;
+		if (str[i] == c)
+			return((char*)(str + i));
+		i--;
 	}
-	
-	if(str[i] == (char)c)
-			return ((char *)(str + i));
-	return (NULL);
-	
+	return(NULL);
 }
+
 int	main(void)
 {
 	char s1[] = "hello, world!";
 	char s2[] = "hello, world!"; 
 	// char * ptr1;
 	// char * ptr2;
-	int	c = 'o';
+	int	c = 'P';
 	// ptr1 = strchr(s1, c);
 	// ptr2 = ft_strchr(s2, c);
-	printf("%s \n",strchr(s1, c));
-	printf("%s",ft_strchr(s2, c));
+	printf("%s \n",strrchr(s1, c));
+	printf("%s",ft_strrchr(s2, c));
 	return (0);
 }
-
-
