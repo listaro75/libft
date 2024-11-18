@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat                                         :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luda-cun <luda-cun@student.42.fr>          #+#  +:+       +#+        */
+/*   By: luciendacunha <luciendacunha@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024-11-14 09:52:06 by luda-cun          #+#    #+#             */
-/*   Updated: 2024-11-14 09:52:06 by luda-cun         ###   ########.fr       */
+/*   Created: 2024/11/14 09:52:06 by luda-cun          #+#    #+#             */
+/*   Updated: 2024/11/18 20:44:22 by luciendacun      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,12 +47,12 @@ size_t  ft_strlcat(char *dst, const char *src, size_t size)
 
 }
 
-int main(){
-	char s1[] = "333";
-	char s2[] = "55555";
-    char s11[] = "333";
-	char s22[] = "55555";
-    printf("%d \n %s\n",strlcat(s1,s2,5),s1);
-    printf("%d \n %s\n",ft_strlcat(s11,s22,5),s11);
+// int main(){
+// 	char s1[] = "333";
+// 	char s2[] = "55555";
+//     char s11[] = "333";
+// 	char s22[] = "55555";
+//     printf("%d \n %s\n",strlcat(s1,s2,5),s1);
+//     printf("%d \n %s\n",ft_strlcat(s11,s22,5),s11);
 
-}
+// }

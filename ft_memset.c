@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset                                          :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: luciendacunha <luciendacunha@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 13:26:50 by luda-cun          #+#    #+#             */
-/*   Updated: 2024/11/13 20:45:59 by luciendacun      ###   ########.fr       */
+/*   Updated: 2024/11/18 20:44:46 by luciendacun      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void *ft_memset(void *s, int c, size_t n)
      return(s);
 }
 
-int main(int argc, char **argv)
-{
+// int main(int argc, char **argv)
+// {
 
-}
+// }
