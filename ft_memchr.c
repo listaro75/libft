@@ -17,26 +17,24 @@ void	*ft_memchr(const char *s, int c, size_t n)
 	size_t	i;
 
 	i = 0;
-	if(!s)
-		return(NULL);
+	if (!s)
+		return (NULL);
 	while (i < n - 1)
 	{
-		if(*(unsigned char*)(s + i) == c)
-			return ((unsigned char*)(s + i));
+		if (*(unsigned char *)(s + i) == c)
+			return ((unsigned char *)(s + i));
 		i++;
 	}
 	return (NULL);
-	
 }
-
-int	main(void)
-{
-	char s1[] = "hello, world!";
-	char s2[] = "hello, world!"; 
-	char * ptr1;
-	char * ptr2;
-	int	c = 'e';
-	printf("%s \n",memchr(s1, c, 5));
-	printf("%s \n",ft_memchr(s2, c, 5));
-	return (0);
-}
+// int	main(void)
+// {
+// 	char s1[] = "hello, world!";
+// 	char s2[] = "hello, world!"; 
+// 	char * ptr1;
+// 	char * ptr2;
+// 	int	c = 'e';
+// 	printf("%s \n",memchr(s1, c, 5));
+// 	printf("%s \n",ft_memchr(s2, c, 5));
+// 	return (0);
+// }

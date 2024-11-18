@@ -1,4 +1,4 @@
-TARGET = libft.a
+NAME = libft.a
 PROGRAM_NAME = prog
 
 CC = cc
@@ -9,10 +9,10 @@ FILES = main.c ft_bzero.c
 CFLAGS = -Wall -Wextra -Werror
 OBJS = $(FILES:.c=.o)
 
-all: $(TARGET)
+all: $(NAME)
 
-$(TARGET) : $(OBJS)
-	$(AR) $(TARGET) $(OBJS)
+$(NAME) : $(OBJS)
+	$(AR) $(NAME) $(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) -o $(PROGRAM_NAME)
 
 $(OBJS) : $(FILES)
@@ -24,7 +24,7 @@ clean:
 	rm -rf $(OBJS) 
 
 fclean : clean
-	rm -rf $(TARGET)
+	rm -rf $(NAME)
 
 go : all
 	./$(PROGRAM_NAME)

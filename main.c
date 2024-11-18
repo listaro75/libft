@@ -14,7 +14,9 @@
 
 int main(void)
 {
-    char str1[] = "lulu";
-    ft_bzero(str1, 2);
-    printf("%c %c %c %c ",str1[0],str1[1],str1[2],str1[3] );
+    int c;
+
+    c = 1;
+    printf("isalpha = %d",isalpha('c'));
+    printf("ft_isalpha = %d",ft_isalpha('c'));
 }
