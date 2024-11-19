@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luciendacunha <luciendacunha@student.42    +#+  +:+       +#+        */
+/*   By: luda-cun <luda-cun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 16:42:55 by luda-cun          #+#    #+#             */
-/*   Updated: 2024/11/19 00:02:35 by luciendacun      ###   ########.fr       */
+/*   Updated: 2024/11/19 22:12:50 by luda-cun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,6 @@ char	*ft_strrchr(const char* str, int c);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 char    *ft_strnstr(const char *haystack, const char *needle, size_t len);
+void	*ft_calloc(size_t count, size_t size);
 
 #endif	
