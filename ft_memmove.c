@@ -28,7 +28,7 @@ void	*ft_memmove(void *dest, void *src, size_t size)
 	}
 	else
 	{
-		i = size -1;
+		i = size - 1;
 		while (i >= 0)
 		{
 			*(unsigned char *)(dest + i) = *(unsigned char *)(src + i);
