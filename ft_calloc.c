@@ -15,19 +15,12 @@
 void	*ft_calloc(size_t count, size_t size)
 {
 	void	*new;
-	// size_t i;
-	
-	// i = 0;
-	if(count <= 0 && size != 0)
-		return(NULL);
-	new = (void *)malloc(count * size);
-	if(!new)
+
+	if (count <= 0 && size != 0)
 		return (NULL);
-	// while (i < count)
-	// {
-	// 	*(unsigned char *)(new + i) = 0;
-	// 	i++;
-	// }
+	new = (void *)malloc(count * size);
+	if (!new)
+		return (NULL);
 	ft_bzero(new, size * count);
-	return(new);
+	return (new);
 }

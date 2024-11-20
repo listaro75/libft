@@ -12,10 +12,10 @@
 
 #include "libft.h"
 
-int ft_strlen(const char *str)
+int	ft_strlen(const char *str)
 {
 	int	i;
-	
+
 	i = 0;
 	while (str[i])
 	{
@@ -23,7 +23,6 @@ int ft_strlen(const char *str)
 	}
 	return (i);
 }
-
 // int main(void)
 // {
 // 	printf("%d\n",ft_strlen("lulu"));
