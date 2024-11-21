@@ -14,5 +14,8 @@
 
 int	main(void)
 {
+	char s1[] = "lulu";
+	printf("%s",ft_strtrim(s1, "u"));
+	return (0);
 	return (0);
 }

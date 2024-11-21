@@ -29,16 +29,4 @@ char	*ft_strchr(const char *str, int c)
 		return ((char *)(str + i));
 	return (NULL);
 }
-// int	main(void)
-// {
-// 	char s1[] = "hello, world!";
-// 	char s2[] = "hello, world!"; 
-// 	// char * ptr1;
-// 	// char * ptr2;
-// 	int	c = 'o';
-// 	// ptr1 = strchr(s1, c);
-// 	// ptr2 = ft_strchr(s2, c);
-// 	printf("%s \n",strchr(s1, c));
-// 	printf("%s",ft_strchr(s2, c));
-// 	return (0);
-// }
+
