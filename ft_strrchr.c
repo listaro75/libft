@@ -12,15 +12,15 @@
 
 #include "libft.h"
 
-char	*ft_strrchr(const char* str, int c)
+char	*ft_strrchr(const char *str, int c)
 {
-	int i;
+	int		i;
 	char	*find;
 
 	i = 0;
 	find = NULL;
-	if(!str)
-		return(NULL);
+	if (!str)
+		return (NULL);
 	while (str[i])
 	{
 		if (str[i] == (unsigned char)c)
@@ -29,7 +29,7 @@ char	*ft_strrchr(const char* str, int c)
 	}
 	if (str[i] == (unsigned char)c)
 		find = (char *)(str + i);
-	return(find);
+	return (find);
 }
 
 // int	main(void)
