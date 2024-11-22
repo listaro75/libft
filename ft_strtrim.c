@@ -12,36 +12,29 @@
 
 #include "libft.h"
 
-// char	*ft_modif(const char *s1,char c)
-// {
-// 	char	*ptr;
-// 	ptr = ft_strdup(s1);
-// 	return (ptr)
-// }
-
 char	*ft_strtrim(const char *s1, const char *set)
 {
 	size_t	i;
 	size_t	j;
 	char	*ptr;
 
-	ptr = ft_strdup(s1);
 	i = 0;
-	j = 0;
-	while(ptr[i])
+	j = ft_strlen(s1) - 1;
+	if (!s1[i])
 	{
-		j = i;
-		if (ptr[i] == set[0])
-		{
-
-		}
-		i++;
+		ptr = (char *)malloc(sizeof(char) * 1);
+		*ptr = 0;
+		return (ptr);
 	}
+	while (ft_strchr(set, s1[i]) && i <= j)
+		i++;
+	if (i > j)
+		return (ft_strdup(s1 + j + 1));
+	while (ft_strchr(set, s1[j]) && j >= 0)
+		j--;
+	ptr = malloc(j - i + 2);
+	if (!ptr)
+		return (NULL);
+	ft_strlcpy(ptr, &s1[i], j - i + 2);
 	return (ptr);
-}
-int	main(void)
-{
-	char s1[] = "lucien lucien";
-	printf("%s",ft_strtrim(s1, "u"));
-	return (0);
 }
