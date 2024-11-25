@@ -15,12 +15,14 @@
 void	ft_putendl_fd(char *s, int fd)
 {
 	size_t	i;
+	char	blc;
 
+	blc = '\n';
 	i = 0;
 	while (s[i])
 	{
 		ft_putchar_fd(s[i], fd);
 		i++;
 	}
-	ft_putchar_fd('\n', fd);
+	ft_putchar_fd(blc, fd);
 }
