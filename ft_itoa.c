@@ -16,50 +16,54 @@ size_t	ft_count(long n)
 {
 	size_t	size;
 
-	if(n < 0)
+	size = 0;
+	if (n == 0)
+		return (1);
+	if (n < 0)
 	{
-		n = n * (-1);
+		n = -n;
 		size = 1;
 	}
-	if(n == 0)
-		size = 1;
-	else 
+	while (n > 0)
 	{
-		while (n)
-		{
-			n = n / 10;
-			size++;
-		}
+		n = n / 10;
+		size++;
 	}
 	return (size);
+}
+
+void	ft_toa(int size, long nb, char *ptr)
+{
+	while (nb > 0)
+	{
+		ptr[size] = (nb % 10) + '0';
+		nb = nb / 10;
+		size--;
+	}
 }
 
 char	*ft_itoa(int n)
 {
 	int		size;
-	int		i;
-	long int	save;
-	char		*ptr;
+	long	nb;
+	char	*ptr;
 
-	save = n;
-	i = 0;
-	size = ft_count(n);
-	ptr = (char *)malloc(size * sizeof(char));
-	if(!ptr)
+	nb = (long)n;
+	size = ft_count(nb);
+	ptr = (char *)malloc((size + 1) * sizeof(char));
+	if (!ptr)
 		return (NULL);
-	if(n < 0)
+	ptr[size] = '\0';
+	if (nb == 0)
 	{
-		n = n * (-1);
+		ptr[0] = '0';
+	}
+	if (nb < 0)
+	{
 		ptr[0] = '-';
-		i++;
+		nb = -nb;
 	}
-	ptr[size] = 0;
 	size--;
-	while (n > i)
-	{
-		ptr[size] = n % 10;
-		n = n / 10;
-		size--;
-	}
+	ft_toa(size, nb, ptr);
 	return (ptr);
 }
