@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: luda-cun <luda-cun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/22 03:52:06 by lucien            #+#    #+#             */
-/*   Updated: 2024/11/25 19:12:54 by luda-cun         ###   ########.fr       */
+/*   Created: 2024/11/25 23:22:53 by luda-cun          #+#    #+#             */
+/*   Updated: 2024/11/25 23:50:07 by luda-cun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *str, int c)
+void	ft_putstr_fd(char *s, int fd)
 {
 	size_t	i;
 
 	i = 0;
-	while (str[i])
+	while (s[i])
 	{
-		if (str[i] == (char)c)
-			return ((char *)(str + i));
+		ft_putchar_fd(s[i], fd);
 		i++;
 	}
-	if (str[i] == (char)c)
-		return ((char *)(str + i));
-	return (NULL);
 }

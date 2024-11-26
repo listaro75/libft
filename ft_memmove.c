@@ -1,49 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove                                         :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luda-cun <luda-cun@student.42.fr>          #+#  +:+       +#+        */
+/*   By: luda-cun <luda-cun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024-11-14 14:12:31 by luda-cun          #+#    #+#             */
-/*   Updated: 2024-11-14 14:12:31 by luda-cun         ###   ########.fr       */
+/*   Created: 2024/11/14 14:12:31 by luda-cun          #+#    #+#             */
+/*   Updated: 2024/11/26 09:51:23 by luda-cun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, void *src, size_t size)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	int	i;
+	size_t	i;
 
-	if (!dest || !src)
+	i = n;
+	if (!dest && !src && n)
 		return (NULL);
-	if (dest > src)
-	{	
-		i = (int)size - 1;
-		while (i >= 0)
-		{
-			*(char *)(dest + i) = *(char *)(src + i);
-			i--;
-		}
-	}
+	if (dest < src)
+		ft_memcpy(dest, src, n);
 	else
 	{
-		i = 0;
-		while (i < (int)size)
+		while (i > 0)
 		{
-			*(char *)(dest + i) = *(char *)(src + i);
-			i++;
+			((unsigned char *)dest)[i - 1] = ((unsigned char *)src)[i - 1];
+			i--;
 		}
 	}
 	return (dest);
 }
-
-// int	main(void)
-// {
-// 	char s1[] = "hello, world!";
-// 	char s2[] = "hello, world!";  
-// 	printf("%s \n",memmove(s1,s1 + 3 , 10));
-// 	printf("%s",ft_memmove(s2 ,s2 + 3, 10));
-// 	return (0);
-// }
