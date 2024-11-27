@@ -6,24 +6,26 @@
 /*   By: luda-cun <luda-cun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 12:37:39 by luda-cun          #+#    #+#             */
-/*   Updated: 2024/11/25 20:37:21 by luda-cun         ###   ########.fr       */
+/*   Updated: 2024/11/27 15:59:44 by luda-cun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *str, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	char	*last_occurrence;
+	size_t	i;
+	char	*find;
 
-	last_occurrence = NULL;
-	while (*str)
+	find = NULL;
+	i = 0;
+	while (s[i])
 	{
-		if (*str == (unsigned char)c)
-			last_occurrence = (char *)str;
-		str++;
+		if (s[i] == (unsigned char) c)
+			find = ((char *)(s + i));
+		i++;
 	}
-	if ((unsigned char)c == '\0')
-		return ((char *)str);
-	return (last_occurrence);
+	if (s[i] == (unsigned char)c)
+		find = (char *)(s + i);
+	return (find);
 }

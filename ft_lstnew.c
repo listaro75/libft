@@ -1,40 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: luda-cun <luda-cun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/14 14:12:31 by luda-cun          #+#    #+#             */
-/*   Updated: 2024/11/27 15:49:36 by luda-cun         ###   ########.fr       */
+/*   Created: 2024/11/27 18:57:43 by luda-cun          #+#    #+#             */
+/*   Updated: 2024/11/27 19:13:12 by luda-cun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+t_list	*ft_lstnew(void *content)
 {
-	int	i;
+	t_list	*element;
 
-	if (n && !dest && !src)
+	element = malloc(sizeof(t_list));
+	if (!element)
 		return (NULL);
-	if (dest > src)
-	{
-		i = (int)n - 1;
-		while (i >= 0)
-		{
-			*(char *)(dest + i) = *(char *)(src + i);
-			i--;
-		}
-	}
-	else
-	{
-		i = 0;
-		while (i < (int)n)
-		{
-			*(char *)(dest + i) = *(char *)(src + i);
-			i++;
-		}
-	}
-	return (dest);
+	element->content = content;
+	element->next = NULL;
+	return (element);
 }

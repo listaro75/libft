@@ -4,23 +4,32 @@ FILES = ft_isalpha.c ft_isalnum.c ft_tolower.c ft_strlen.c ft_isprint.c ft_isdig
 		ft_strtrim.c ft_itoa.c ft_strmapi.c ft_striteri.c ft_putchar_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
 		ft_putstr_fd.c ft_split.c
 
+BFILES = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c
+
 NAME = libft.a
-CC = cc
+CC = gcc
+AR = ar
 CFLAGS = -Wall -Werror -Wextra
 OBJ = $(FILES:.c=.o)
+BOBJ = $(BFILES:.c=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	ar -rcs $(NAME) $(OBJ)
+	$(AR) -r $@ $?
+
+bonus: $(NAME) $(BOBJ)
+	$(AR) -r $(NAME) $(BOBJ)
 
 %.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) -c $(CFLAGS) $< -o $@
 
 clean:
-	rm -f $(OBJ)
+	rm -f $(OBJ) $(BOBJ)
 
 fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
+
+.PHONY: all bonus clean fclean re
