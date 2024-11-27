@@ -12,35 +12,109 @@
 
 #include "libft.h"
 
-size_t	ft_count_world(char *s, int c)
+int	ft_count_world(char const*s, char c)
 {
-	size_t	i;
-	size_t	size;
+	int	i;
+	int	size;
 
 	size = 0;
 	i = 0;
-	while (s[i])
+	while (s[i] != '\0')
 	{
-		if (s[i] == c)
+		if (s[i] != c)
 		{
 			size++;
-			while (s[i] == c)
+			while (s[i] != c && s[i] != '\0')
 				i++;
-			
 		}
-		
-		i++;
+		else
+			i++;
 	}
 	return (size);
 }
-
-void	ft_splitff(char s, char c)
+char	*skipchar(char const*s, char c)
 {
-	printf("%zu",ft_count_world(s, c));
+	while (*s == c && *s != '\0')
+	{
+		s++;
+	}
+	return ((char *)s);
+}
+char	*ft_copy_word(char const *s, char c)
+{
+	int		i;
+	int		j;
+	char	*copy;
+
+	i = 0;
+	j = 0;
+	while(s[i] != '\0' && s[i] != c)
+	{
+		i++;
+	}
+	copy = (char * )malloc(sizeof(char) * (i + 1));
+	if(!copy)
+		return(NULL);
+	while (j < i)
+	{
+		copy[j] =s[j];
+		j++; 
+	}
+	copy[j] = 0;
+	return (copy);
+}
+int		skipword(char const *s, char c)
+{
+	int i;
+	i = 0;
+	while (s[i] != c && s[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
+	
+}
+char	**ft_split(char const *s, char c)
+{
+	char	**array;
+	int		count;
+	int		i;
+
+	i = 0;
+	if (!s)
+		return (NULL);
+	s = skipchar(s, c);
+	count = ft_count_world(s, c);
+	array = (char **)malloc(sizeof(char *) * (count + 1));
+	if (!array)
+		return (NULL);
+	while (i < count)
+	{
+		array[i] = ft_copy_word(s, c);
+		if(!array[i])
+			return(NULL);
+		s = skipchar(s + skipword(s,c), c);
+		i++;
+	}
+	array[i] = NULL;
+	return (array);
 }
 
-int main(void)
-{
-	ft_splitff("jikiji ji ji ji ji ji jrijfierf jj irjei fji erj", ' ');
-	return 0;
-}
+// int main(void)
+// {
+// 	char str[]="cbonjourcccheychello";
+// 	char	**strr;
+// 	char	c;
+// 	int	i = 0;
+
+// 	c = 'c';
+// 	strr=ft_split(str, c);
+// 	while (strr[i])
+// 	{
+// 		printf("%s\n", strr[i]);
+// 		i++;
+// 	}
+
+
+
+// }
